@@ -1,0 +1,98 @@
+import React from "react";
+import CarChassi from "../assets/ani-car-chassi.svg";
+import CarWheel from "../assets/ani-wheel.svg";
+import Road from "../assets/ani-road.svg";
+import TreeAndLights from "../assets/ani-tree-and-lights.svg";
+import City from "../assets/ani-city.svg";
+import Clouds from "../assets/ani-clouds.svg";
+import Sun from "../assets/ani-sun.svg"
+
+function Landing() {
+  return (
+    <section id="landing">
+      <header>
+        <div className="header__content">
+          <h1 className="title">
+            Portugal's most awarded
+            <br />
+            car subscription platform
+          </h1>
+          <h2 className="sub-title light-blue">
+            FIND YOUR DREAM CAR WITH <span className="blue">BLINKER</span>
+          </h2>
+          <div className="search__input--wrapper">
+            <a href="/">
+              <button className="btn__search">BROWSE CARS</button>
+            </a>
+          </div>
+        </div>
+        <div class="landing__animation--row">
+          <div class="animation__content">
+            <div class="car__container">
+              <img
+                class="car-chassi"
+                src={CarChassi}
+                alt=""
+              />
+              <img
+                class="car-wheel__img car-wheel__front"
+                src={CarWheel}
+                alt=""
+              />
+              <img
+                class="car-wheel__img car-wheel__rear"
+                src={CarWheel}
+                alt=""
+              />
+            </div>
+            <div class="road__container">
+              <div class="road__slide">
+                <img class="road__img" src={Road} alt="" />
+              </div>
+              <div class="road__slide">
+                <img class="road__img" src={Road} alt="" />
+              </div>
+            </div>
+            <div class="tree-and-lights__container">
+              <div class="tree-and-lights__slide">
+                <img
+                  class="tree-and-lights__img"
+                  src={TreeAndLights}
+                  alt=""
+                />
+              </div>
+              <div class="tree-and-lights__slide">
+                <img
+                  class="tree-and-lights__img"
+                  src={TreeAndLights}
+                  alt=""
+                />
+              </div>
+            </div>
+            <div class="city__container">
+              <div class="city__slide">
+                <img class="city__img" src={City} alt="" />
+              </div>
+              <div class="city__slide">
+                <img class="city__img" src={City} alt="" />
+              </div>
+            </div>
+            <div class="clouds__container">
+              <div class="clouds__slide">
+                <img class="clouds__img" src={Clouds} alt="" />
+              </div>
+              <div class="clouds__slide">
+                <img class="clouds__img" src={Clouds} alt="" />
+              </div>
+            </div>
+            <div class="sun__container">
+              <img class="sun__img" src={Sun} alt="" />
+            </div>
+          </div>
+        </div>
+      </header>
+    </section>
+  );
+}
+
+export default Landing;
