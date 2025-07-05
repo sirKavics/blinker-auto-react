@@ -1,11 +1,17 @@
-import logoColor from "../assets/blinker-logo-color.svg";
+import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import BlinkerLogoColor from "../assets/blinker-logo-color.svg";
 
 function Nav() {
   return (
     <nav>
       <div className="nav__container">
         <a href="/">
-          <img src={logoColor} alt="Blinker Logo" className="blinker__logo" />
+          <img
+            src={BlinkerLogoColor}
+            alt="Blinker Logo"
+            className="blinker__logo"
+          />
         </a>
       </div>
       <ul className="nav__links">
@@ -24,11 +30,32 @@ function Nav() {
             CONTACT
           </a>
         </li>
-        <button className="btn__menu"></button>
+        <div className="menu__container">
+          <button className="btn__menu">
+            <FontAwesomeIcon icon="bars" />
+          </button>
+        </div>
       </ul>
+      <div className="menu__backdrop">
+        <button className="menu__btn btn__menu--close">
+          <FontAwesomeIcon icon="times" />
+        </button>
+        <ul className="menu__links">
+          <li className="menu__list">
+            <a href="/" className="menu__link link__hover-effect">
+              Home
+            </a>
+            <a href="/" className="menu__link link__hover-effect">
+              Find your car
+            </a>
+            <a href="/" className="menu__link link__hover-effect">
+              CONTACT
+            </a>
+          </li>
+        </ul>
+      </div>
     </nav>
   );
 }
 
 export default Nav;
-
