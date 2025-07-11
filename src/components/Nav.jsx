@@ -3,6 +3,14 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import BlinkerLogoColor from "../assets/blinker-logo-color.svg";
 
 function Nav() {
+  function openMenu() {
+    document.body.classList += " menu--open";
+  }
+
+  function closeMenu() {
+    document.body.classList.remove("menu--open");
+  }
+
   return (
     <nav>
       <div className="nav__container">
@@ -31,13 +39,13 @@ function Nav() {
           </a>
         </li>
         <div className="menu__container">
-          <button className="btn__menu">
-            <FontAwesomeIcon icon="bars" />
+          <button className="btn__menu cursor-pointer">
+            <FontAwesomeIcon icon="bars" onClick={openMenu} />
           </button>
         </div>
       </ul>
       <div className="menu__backdrop">
-        <button className="menu__btn btn__menu--close">
+        <button className="btn__menu cursor-pointer btn__menu--close" onClick={closeMenu}>
           <FontAwesomeIcon icon="times" />
         </button>
         <ul className="menu__links">
@@ -45,10 +53,14 @@ function Nav() {
             <a href="/" className="menu__link link__hover-effect">
               Home
             </a>
+            </li>
+            <li className="menu__list">
             <a href="/" className="menu__link link__hover-effect">
               Find your car
             </a>
-            <a href="/" className="menu__link link__hover-effect">
+            </li>
+            <li className="menu__list">
+            <a href="/" className="menu__link--contact btn__contact no-cursor">
               CONTACT
             </a>
           </li>
