@@ -212,7 +212,7 @@ nav {
 .menu__link--contact {
   font-size: 20px;
   font-weight: 700;
-  letter-spacing: 1px;
+  letter-spacing: 3px;
   color: white;
 }
 
@@ -342,6 +342,9 @@ header {
 
 .btn__search {
   width: 220px;
+  height: 64px;
+  font-size: 18px;
+  letter-spacing: 2px;
   height: 60px;
   margin: 0 auto;
   border-radius: 30px;
