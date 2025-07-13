@@ -26,67 +26,67 @@ function Landing() {
             </a>
           </div>
         </div>
-        <div class="landing__animation--row">
-          <div class="animation__content">
-            <div class="car__container">
+        <div className="landing__animation--row">
+          <div className="animation__content">
+            <div className="car__container">
               <img
-                class="car-chassi"
+                className="car-chassi"
                 src={CarChassi}
                 alt=""
               />
               <img
-                class="car-wheel__img car-wheel__front"
+                className="car-wheel__img car-wheel__front"
                 src={CarWheel}
                 alt=""
               />
               <img
-                class="car-wheel__img car-wheel__rear"
+                className="car-wheel__img car-wheel__rear"
                 src={CarWheel}
                 alt=""
               />
             </div>
-            <div class="road__container">
-              <div class="road__slide">
-                <img class="road__img" src={Road} alt="" />
+            <div className="road__container">
+              <div className="road__slide">
+                <img className="road__img" src={Road} alt="" />
               </div>
-              <div class="road__slide">
-                <img class="road__img" src={Road} alt="" />
+              <div className="road__slide">
+                <img className="road__img" src={Road} alt="" />
               </div>
             </div>
-            <div class="tree-and-lights__container">
-              <div class="tree-and-lights__slide">
+            <div className="tree-and-lights__container">
+              <div className="tree-and-lights__slide">
                 <img
-                  class="tree-and-lights__img"
+                  className="tree-and-lights__img"
                   src={TreeAndLights}
                   alt=""
                 />
               </div>
-              <div class="tree-and-lights__slide">
+              <div className="tree-and-lights__slide">
                 <img
-                  class="tree-and-lights__img"
+                  className="tree-and-lights__img"
                   src={TreeAndLights}
                   alt=""
                 />
               </div>
             </div>
-            <div class="city__container">
-              <div class="city__slide">
-                <img class="city__img" src={City} alt="" />
+            <div className="city__container">
+              <div className="city__slide">
+                <img className="city__img" src={City} alt="" />
               </div>
-              <div class="city__slide">
-                <img class="city__img" src={City} alt="" />
-              </div>
-            </div>
-            <div class="clouds__container">
-              <div class="clouds__slide">
-                <img class="clouds__img" src={Clouds} alt="" />
-              </div>
-              <div class="clouds__slide">
-                <img class="clouds__img" src={Clouds} alt="" />
+              <div className="city__slide">
+                <img className="city__img" src={City} alt="" />
               </div>
             </div>
-            <div class="sun__container">
-              <img class="sun__img" src={Sun} alt="" />
+            <div className="clouds__container">
+              <div className="clouds__slide">
+                <img className="clouds__img" src={Clouds} alt="" />
+              </div>
+              <div className="clouds__slide">
+                <img className="clouds__img" src={Clouds} alt="" />
+              </div>
+            </div>
+            <div className="sun__container">
+              <img className="sun__img" src={Sun} alt="" />
             </div>
           </div>
         </div>

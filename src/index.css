@@ -159,7 +159,7 @@ nav {
   position: absolute;
   font-size: 48px;
   right: 99px;
-  top: 47px;
+  top: 55px;
 }
 
 .menu__backdrop {
@@ -346,9 +346,9 @@ header {
   margin: 0 auto;
   border-radius: 30px;
   border: none;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 600;
-  letter-spacing: 3px;
+  letter-spacing: 4px;
   background-color: #135677;
   color: white;
   cursor: pointer;
@@ -865,7 +865,7 @@ MEDIA RESPONSIVENESS
     width: 80%;
   }
   .menu__backdrop {
-    height: 600px;
+    height: 550px;
   }
   .landing__animation--row {
     width: 768px;
@@ -900,6 +900,10 @@ MEDIA RESPONSIVENESS
     top: 2px;
     right: 50px;
   }
+  .btn__menu--close {
+    top: 54px;
+    right: 99px;
+  }
   .title {
     font-size: 44px;
   }
@@ -921,7 +925,7 @@ MEDIA RESPONSIVENESS
     height: 52px;
   }
   .menu__backdrop {
-    height: 530px;
+    height: 472px;
   }
   .landing__animation--row {
     width: 576px;
@@ -996,11 +1000,11 @@ MEDIA RESPONSIVENESS
     top: 2px;
   }
   .btn__menu--close {
-    top: 30px;
+    top: 40px;
     right: 49px;
   }
   .menu__backdrop {
-    height: 426px;
+    height: 340px;
   }
   .header__content {
     margin: 0 32px;
@@ -1199,7 +1203,7 @@ MEDIA RESPONSIVENESS
     right: 49px;
   }
   .menu__backdrop {
-    height: 330px;
+    height: 256px;
   }
   .menu__link {
     font-size: 20px;
