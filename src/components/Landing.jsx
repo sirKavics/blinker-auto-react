@@ -30,8 +30,17 @@ function Landing() {
         <div className="landing__animation--row">
           <div className="animation__content">
             <div className="car__container">
+<<<<<<< HEAD
+              <img
+                className="car-chassi"
+                src={CarChassi}
+                alt=""
+              />
+              <img
+=======
               <img className="car-chassi" src={CarChassi} alt="" />
               <img
+>>>>>>> eb9f4a4f2aa12ff66bf8feab63a27148ac0452c7
                 className="car-wheel__img car-wheel__front"
                 src={CarWheel}
                 alt=""
