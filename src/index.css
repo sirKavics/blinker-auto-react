@@ -43,7 +43,7 @@ a {
 p {
   color: #1f96d1;
   font-size: 20px;
-  font-weight: 500
+  font-weight: 500;
 }
 
 /*
@@ -77,8 +77,7 @@ nav {
 }
 
 .nav__links {
-  position: absolute;
-  right: 50px;
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -140,12 +139,11 @@ nav {
 }
 
 .btn__menu {
-  position: absolute;
+  position: relative;
   border: none;
   background-color: transparent;
   color: #135677;
   font-size: 40px;
-  right: 50px;
   top: 2px;
   padding: 0 8px;
   transition: all 400ms ease;
@@ -901,11 +899,10 @@ MEDIA RESPONSIVENESS
 @media (max-width: 768px) {
   .btn__menu {
     top: 2px;
-    right: 50px;
   }
   .btn__menu--close {
     top: 54px;
-    right: 99px;
+    right: 88px;
   }
   .title {
     font-size: 44px;
@@ -975,7 +972,7 @@ MEDIA RESPONSIVENESS
     width: 194px;
     display: flex;
     flex-direction: column;
-    align-items: end; 
+    align-items: end;
   }
   .price__options--container {
     width: 194px;
@@ -996,18 +993,18 @@ MEDIA RESPONSIVENESS
   nav {
     width: 100%;
     height: 132px;
-    margin: 0;
   }
   .btn__menu {
-    right: 0px;
     top: 2px;
+    right: 48px;
   }
+
   .btn__menu--close {
     top: 40px;
-    right: 49px;
+    right: 48px;
   }
   .menu__backdrop {
-    height: 340px;
+    height: 360px;
   }
   .header__content {
     margin: 0 32px;
@@ -1036,13 +1033,13 @@ MEDIA RESPONSIVENESS
     margin-bottom: 16px;
   }
   .search__input::placeholder {
-    font-size: 18px;
+    font-size: 186px;
     text-align: center;
   }
   .btn__search {
     font-size: 10px;
-    height: 30px;
-    width: 140px;
+    height: 40px;
+    width: 160px;
   }
   .landing__animation--row {
     width: 420px;
@@ -1133,7 +1130,7 @@ MEDIA RESPONSIVENESS
   }
   .search__toggle--container {
     margin-bottom: 20px;
-    margin-top: 0px
+    margin-top: 0px;
   }
   .search__toggle--bar {
     width: 280px;

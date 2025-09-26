@@ -21,50 +21,56 @@ function Nav() {
             className="blinker__logo"
           />
         </a>
-      </div>
-      <ul className="nav__links">
-        <li className="nav__list">
-          <a href="/" className="nav__link link__hover-effect">
-            Home
-          </a>
-        </li>
-        <li className="nav__list">
-          <a href="/" className="nav__link link__hover-effect">
-            Find your car
-          </a>
-        </li>
-        <li className="nav__list">
-          <a href="/" className="nav__link btn__contact no-cursor">
-            CONTACT
-          </a>
-        </li>
-        <div className="menu__container">
-          <button className="btn__menu cursor-pointer">
-            <FontAwesomeIcon icon="bars" onClick={openMenu} />
-          </button>
-        </div>
-      </ul>
-      <div className="menu__backdrop">
-        <button className="btn__menu cursor-pointer btn__menu--close" onClick={closeMenu}>
-          <FontAwesomeIcon icon="times" />
-        </button>
-        <ul className="menu__links">
-          <li className="menu__list">
-            <a href="/" className="menu__link link__hover-effect">
+        <ul className="nav__links">
+          <li className="nav__list">
+            <a href="/" className="nav__link link__hover-effect">
               Home
             </a>
-            </li>
-            <li className="menu__list">
-            <a href="/" className="menu__link link__hover-effect">
+          </li>
+          <li className="nav__list">
+            <a href="/" className="nav__link link__hover-effect">
               Find your car
             </a>
-            </li>
-            <li className="menu__list">
-            <a href="/" className="menu__link--contact btn__contact no-cursor">
+          </li>
+          <li className="nav__list">
+            <a href="/" className="nav__link btn__contact no-cursor">
               CONTACT
             </a>
           </li>
+          <div className="menu__container">
+            <button className="btn__menu cursor-pointer">
+              <FontAwesomeIcon icon="bars" onClick={openMenu} />
+            </button>
+          </div>
         </ul>
+        <div className="menu__backdrop">
+          <button
+            className="btn__menu cursor-pointer btn__menu--close"
+            onClick={closeMenu}
+          >
+            <FontAwesomeIcon icon="times" />
+          </button>
+          <ul className="menu__links">
+            <li className="menu__list">
+              <a href="/" className="menu__link link__hover-effect">
+                Home
+              </a>
+            </li>
+            <li className="menu__list">
+              <a href="/" className="menu__link link__hover-effect">
+                Find your car
+              </a>
+            </li>
+            <li className="menu__list">
+              <a
+                href="/"
+                className="menu__link--contact btn__contact no-cursor"
+              >
+                CONTACT
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </nav>
   );
