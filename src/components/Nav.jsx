@@ -2,7 +2,7 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import BlinkerLogoColor from "../assets/blinker-logo-color.svg";
 
-function Nav() {
+const Nav = () => {
   function openMenu() {
     document.body.classList += " menu--open";
   }
@@ -28,7 +28,7 @@ function Nav() {
             </a>
           </li>
           <li className="nav__list">
-            <a href="/" className="nav__link link__hover-effect">
+            <a href="/findyourcar" className="nav__link link__hover-effect">
               Find your car
             </a>
           </li>
@@ -44,11 +44,8 @@ function Nav() {
           </div>
         </ul>
         <div className="menu__backdrop">
-          <button
-            className="btn__menu cursor-pointer btn__menu--close"
-            onClick={closeMenu}
-          >
-            <FontAwesomeIcon icon="times" />
+          <button className="btn__menu cursor-pointer btn__menu--close">
+            <FontAwesomeIcon icon="times" onClick={closeMenu} />
           </button>
           <ul className="menu__links">
             <li className="menu__list">
@@ -57,7 +54,7 @@ function Nav() {
               </a>
             </li>
             <li className="menu__list">
-              <a href="/" className="menu__link link__hover-effect">
+              <a href="/findyourcar" className="menu__link link__hover-effect">
                 Find your car
               </a>
             </li>
