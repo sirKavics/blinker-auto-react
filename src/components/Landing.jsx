@@ -8,7 +8,7 @@ import City from "../assets/ani-city.svg";
 import Clouds from "../assets/ani-clouds.svg";
 import Sun from "../assets/ani-sun.svg";
 
-function Landing() {
+const Landing = () => {
   return (
     <section id="landing">
       <header>
@@ -22,7 +22,7 @@ function Landing() {
             FIND YOUR DREAM CAR WITH <span className="blue">BLINKER</span>
           </h2>
           <div className="search__input--wrapper">
-            <a href="/">
+            <a href="/findyourcar">
               <button className="btn__search">BROWSE CARS</button>
             </a>
           </div>
