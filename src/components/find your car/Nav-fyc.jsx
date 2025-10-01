@@ -1,9 +1,9 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import NavBackground from "../assets/car-lot-background-overlay.jpg";
-import BlinkerLogoWhite from "../assets/blinker-logo-white.svg";
+import NavBackground from "../../assets/car-lot-background-overlay.jpg";
+import BlinkerLogoWhite from "../../assets/blinker-logo-white.svg";
 
-const Navfyc = () => {
+const NavFYC = () => {
   function openMenu() {
     document.body.classList += " menu--open";
   }
@@ -90,4 +90,4 @@ const Navfyc = () => {
   );
 };
 
-export default Navfyc;
+export default NavFYC;

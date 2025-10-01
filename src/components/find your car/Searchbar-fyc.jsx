@@ -1,6 +1,7 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 
-const Search = () => {
+const SearchFYC = () => {
   return (
     <div className="search__container">
       <h1 className="search__title">Browse our cars</h1>
@@ -33,7 +34,7 @@ const Search = () => {
               className="btn__search fyc-btn__search"
               onClick="renderCars()"
             >
-              <i className="fas fa-search"></i>
+              <FontAwesomeIcon icon="search" />
             </button>
           </div>
         </form>
@@ -42,4 +43,4 @@ const Search = () => {
   );
 };
 
-export default Search;
+export default SearchFYC;

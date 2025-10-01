@@ -1,13 +1,15 @@
 import React from 'react'
 
-import Navfyc from "../components/Nav-fyc.jsx"
-import Search from "../components/Search.jsx"
+import NavFYC from '../components/find your car/Nav-fyc.jsx'
+import SearchFYC from "../components/find your car/Searchbar-fyc.jsx"
+import Cars from '../components/find your car/Cars-fyc.jsx'
 
 const FindYourCar = () => {
   return (
     <>
-      <Navfyc />
-      <Search />
+      <NavFYC />
+      <SearchFYC />
+      <Cars />
     </>
   )
 }
