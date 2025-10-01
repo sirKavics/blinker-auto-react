@@ -350,7 +350,7 @@ header {
   font-weight: 600;
   letter-spacing: 4px;
   background-color: #135677;
-  color: white;
+  color: rgb(0, 0, 0);
   cursor: pointer;
   transition: all 400ms ease;
 }
@@ -621,6 +621,7 @@ NAVBAR
 }
 
 .fyc-btn__search {
+  font-size: 30px;
   position: absolute;
   color: #1b78a6;
   background-color: transparent;
@@ -729,10 +730,10 @@ SEARCH INFO
 }
 
 .price-title {
-  font-size: 20px;
+  font-size: 18px;
   letter-spacing: 1px;
-  margin: 0 0 12px;
-  text-align: end;
+  margin: 0 0 4px 16px;
+  text-align: start;
   color: #1f96d1;
 }
 
@@ -968,14 +969,13 @@ MEDIA RESPONSIVENESS
     padding-right: 10px;
   }
   .price-title {
-    font-size: 18px;
-    margin-bottom: 8px;
+    font-size: 16px;
+    margin-bottom: 4px;
   }
   .price-filter__container {
     width: 194px;
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
   }
   .price__options--container {
     width: 194px;
@@ -1178,7 +1178,7 @@ MEDIA RESPONSIVENESS
   .price-title {
     font-size: 15px;
     text-align: center;
-    margin-bottom: 8px;
+    margin: 0 0 4px 0;
   }
   .car__list--container {
     padding-top: 14px;

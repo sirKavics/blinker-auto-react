@@ -1,12 +1,12 @@
 import React from "react";
 
-import CarChassi from "../assets/ani-car-chassi.svg";
-import CarWheel from "../assets/ani-wheel.svg";
-import Road from "../assets/ani-road.svg";
-import TreeAndLights from "../assets/ani-tree-and-lights.svg";
-import City from "../assets/ani-city.svg";
-import Clouds from "../assets/ani-clouds.svg";
-import Sun from "../assets/ani-sun.svg";
+import CarChassi from "../../assets/ani-car-chassi.svg";
+import CarWheel from "../../assets/ani-wheel.svg";
+import Road from "../../assets/ani-road.svg";
+import TreeAndLights from "../../assets/ani-tree-and-lights.svg";
+import City from "../../assets/ani-city.svg";
+import Clouds from "../../assets/ani-clouds.svg";
+import Sun from "../../assets/ani-sun.svg";
 
 const Landing = () => {
   return (
