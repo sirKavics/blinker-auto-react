@@ -1,5 +1,5 @@
 import React from "react";
-import CarCard from "../ui/Car-card";
+import CarCard from "./ui/Car-card";
 
 const CarsFYC = () => {
   return (
@@ -31,8 +31,6 @@ const CarsFYC = () => {
       </div>
       <div id="cars" className="car__list--container">
         <div className="car__list">
-          <CarCard />
-          <CarCard />
           <CarCard />
         </div>
       </div>

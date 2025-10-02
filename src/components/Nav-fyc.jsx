@@ -1,7 +1,7 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import NavBackground from "../../assets/car-lot-background-overlay.jpg";
-import BlinkerLogoWhite from "../../assets/blinker-logo-white.svg";
+import NavBackground from "../assets/car-lot-background-overlay.jpg";
+import BlinkerLogoWhite from "../assets/blinker-logo-white.svg";
 
 const NavFYC = () => {
   function openMenu() {
