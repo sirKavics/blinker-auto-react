@@ -1,6 +1,6 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import BlinkerLogoColor from "../../assets/blinker-logo-color.svg";
+import BlinkerLogoColor from "../assets/blinker-logo-color.svg";
 
 const Nav = () => {
   function openMenu() {
