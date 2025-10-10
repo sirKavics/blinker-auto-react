@@ -869,6 +869,9 @@ MEDIA RESPONSIVENESS
   .menu__backdrop {
     height: 550px;
   }
+  .fyc-menu__btn--close {
+    right: 103px;
+  }
   .fyc__menu--backdrop {
     height: 362px;
   }
@@ -905,8 +908,8 @@ MEDIA RESPONSIVENESS
     top: 2px;
   }
   .btn__menu--close {
-    top: 54px;
-    right: 88px;
+    top: 52px;
+    right: 80px;
   }
   .title {
     font-size: 44px;
@@ -947,7 +950,11 @@ MEDIA RESPONSIVENESS
     left: 250px;
   }
   .fyc-menu__btn {
-    right: 90px;
+    right: 0px;
+  }
+  .fyc-menu__btn--close {
+    right: 102px;
+    top: 30px;
   }
   .fyc__menu--backdrop {
     height: 332px;
@@ -1090,14 +1097,14 @@ MEDIA RESPONSIVENESS
     width: 400%;
   }
   .fyc-menu__btn {
-    top: 26px;
-    right: 58px;
+    right: 0px;
   }
   .fyc__menu--backdrop {
     height: 100%;
   }
   .fyc-menu__btn--close {
-    top: 22px;
+    top: 28px;
+    right: 55px;
   }
   .menu__list {
     padding: 18px 0;
@@ -1275,16 +1282,15 @@ MEDIA RESPONSIVENESS
     padding: 25px 0px;
   }
   .fyc-menu__btn {
-    top: 26px;
-    right: 10px;
+    right: 30px;
     scale: 0.8;
   }
   .fyc__menu--backdrop {
     height: 100%;
   }
   .fyc-menu__btn--close {
-    top: 20px;
-    right: 10px;
+    top: 28px;
+    right: 9px;
   }
   .fyc-btn__contact {
     padding: 14px 34px;

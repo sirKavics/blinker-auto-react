@@ -1,7 +1,20 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+import { getAllCars } from "./api/Cars-api.jsx";
+
 import CarCard from "./ui/Car-card";
 
 const CarsFYC = () => {
+  const [cars, setCars] = useState([]);
+
+  useEffect(() => {
+    async function fetchCars() {
+      const carsData = await getAllCars();
+      setCars(carsData);
+    }
+    fetchCars();
+  }, []);
+
   return (
     <section id="search">
       <div className="progress__buffer"></div>
@@ -31,7 +44,9 @@ const CarsFYC = () => {
       </div>
       <div id="cars" className="car__list--container">
         <div className="car__list">
-          <CarCard />
+          {cars.map((car) => (
+            <CarCard key={car.id} car={car} />
+          ))}
         </div>
       </div>
     </section>
