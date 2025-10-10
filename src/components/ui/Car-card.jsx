@@ -11,7 +11,7 @@ const CarCard = ({ car }) => {
           <img src={CarImg} className="car__img--wrapper" alt="" />
         </figure>
         <div className="car__info">
-          <p className="car__name light-blue">{car.car_model_year} {car.car} {car.car_model}</p>
+          <p className="car__name light-blue">{car.car_model_year} {car.car} <br /> {car.car_model}</p>
           <br></br>
           <div className="car-specs__container">
             <div className="car__spec">
