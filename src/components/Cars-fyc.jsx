@@ -1,18 +1,34 @@
 import React, { useEffect, useState } from "react";
 import { getAllCars } from "./api/Cars-api.jsx";
 
-import CarCard from "./ui/Car-card";
+import CarCard from "./ui/Car-card.jsx";
 
-const CarsFYC = () => {
+const CarsFYC = ({ searchType, searchInput }) => {
   const [cars, setCars] = useState([]);
+  const [filteredCars, setFilteredCars] = useState([]);
 
   useEffect(() => {
     async function fetchCars() {
-      const carsData = await getAllCars();
-      setCars(carsData);
+      const allCars = await getAllCars();
+      setCars(allCars);
+      setFilteredCars(allCars);
     }
     fetchCars();
   }, []);
+
+  useEffect(() => {
+    if (!searchInput) {
+      setFilteredCars(cars);
+      return;
+    }
+
+    const searchResults = cars.filter((car) => {
+    const value = car[searchType];
+    return value && value.toString().toLowerCase().includes(searchInput.toLowerCase());
+  });
+
+    setFilteredCars(searchResults);
+  }, [searchInput, searchType, cars]);
 
   return (
     <section id="search">
@@ -43,7 +59,7 @@ const CarsFYC = () => {
       </div>
       <div id="cars" className="car__list--container">
         <div className="car__list">
-          {cars.map((car) => (
+          {filteredCars.map((car) => (
             <CarCard key={car.id} car={car} />
           ))}
         </div>

@@ -1,22 +1,27 @@
-import React, { useState } from "react";
+import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const SearchFYC = () => {
-  const [searchType, setSearchType] = useState("brand");
+const SearchFYC = ({ searchType, searchInput, setSearchType, setSearchInput }) => {
 
   const handleToggle = (type) => {
     setSearchType(type);
+  };
+
+  const handleSubmit= (e) => {
+    e.preventDefault();
   };
 
   return (
     <div className="search__container">
       <h1 className="search__title">Browse our cars</h1>
       <div className="search__input--container fyc-search__input--container">
-        <form id="search__bar" onSubmit={(e) => e.preventDefault()}>
+        <form id="search__bar" onSubmit={handleSubmit}>
           <input
             className="search__input fyc-search__input"
             type="text"
             placeholder={`Search your car by ${searchType}`}
+            value={searchInput}
+            onChange={(e) => setSearchInput(e.target.value)}
           />
           <div className="search__toggle--container">
             <div className="search__toggle--bar">
@@ -26,7 +31,7 @@ const SearchFYC = () => {
                   transform:
                   searchType === "brand"
                   ? "translateX(0%)" : searchType === "model"
-                  ? "translateX(100%)" : "translate(240px)",
+                  ? "translateX(100%)" : "translateX(240px)",
                 }}  
               ></div>
               <button
@@ -61,7 +66,7 @@ const SearchFYC = () => {
           <div className="fyc-btn__search--container">
             <button
               className="btn__search fyc-btn__search"
-              onClick={() => console.log(`Searching by ${searchType}`)}
+              type="submit"
             >
               <FontAwesomeIcon icon="search" />
             </button>
