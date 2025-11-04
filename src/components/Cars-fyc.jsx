@@ -22,10 +22,19 @@ const CarsFYC = ({ searchType, searchInput }) => {
       return;
     }
 
+    const typeMap = {
+      brand: "car",
+      model: "car_model",
+      year: "car_model_year",
+    };
+
     const searchResults = cars.filter((car) => {
-    const value = car[searchType];
-    return value && value.toString().toLowerCase().includes(searchInput.toLowerCase());
-  });
+      const value = car[typeMap[searchType]];
+      return (
+        value &&
+        value.toString().toLowerCase().includes(searchInput.toLowerCase())
+      );
+    });
 
     setFilteredCars(searchResults);
   }, [searchInput, searchType, cars]);

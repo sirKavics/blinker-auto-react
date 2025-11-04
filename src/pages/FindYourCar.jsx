@@ -7,6 +7,18 @@ import CarsFYC from '../components/Cars-fyc.jsx'
 const FindYourCar = () => {
   const [searchType, setSearchType] = useState("brand");
   const [searchInput, setSearchInput] = useState("");
+  const [submittedSearch, setSubmittedSearch] = useState({
+    type: "",
+     input: "",
+    });
+
+  const handleSearchSubmit = (e) => {
+    e.preventDefault();
+    setSubmittedSearch({
+      type: searchType,
+      input: searchInput.trim(),
+    });
+  };
 
   return (
     <>
@@ -16,13 +28,14 @@ const FindYourCar = () => {
         searchInput={searchInput}
         setSearchType={setSearchType}
         setSearchInput={setSearchInput}
+        handleSearchSubmit={handleSearchSubmit}
       />
       <CarsFYC 
-        searchType={searchType}
-        searchInput={searchInput}
+        searchType={submittedSearch.type}
+        searchInput={submittedSearch.input}
       />
     </>
-  )
-}
+  );
+};
 
 export default FindYourCar;
