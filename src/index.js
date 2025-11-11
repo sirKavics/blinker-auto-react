@@ -12,10 +12,12 @@ import {
   faCarSide, 
   faGears, 
   faShareNodes, 
-  faHeart, 
+  faHeart,
+  faSprayCanSparkles,
+  faGasPump
 } from "@fortawesome/free-solid-svg-icons";
 
-library.add(faBars, faTimes, faSearch, faGaugeHigh, faCarSide, faGears, faShareNodes, faHeart)
+library.add(faBars, faTimes, faSearch, faGaugeHigh, faCarSide, faGears, faShareNodes, faHeart, faSprayCanSparkles, faGasPump )
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
