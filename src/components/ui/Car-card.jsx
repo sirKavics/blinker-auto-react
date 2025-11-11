@@ -18,11 +18,11 @@ const CarCard = ({ car }) => {
               <figure className="spec__img">
                 <FontAwesomeIcon icon="gauge-high" />
               </figure>
-              <p className="spec__info light-blue">N/A km</p>
+              <p className="spec__info light-blue">N/A miles</p>
             </div>
             <div className="car__spec">
               <figure className="spec__img">
-                <FontAwesomeIcon icon="car-side" />
+                <FontAwesomeIcon icon="spray-can-sparkles" />
               </figure>
               <p className="spec__info light-blue">{car.car_color}</p>
             </div>

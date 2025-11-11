@@ -839,17 +839,20 @@ SEARCH INFO
 
 /* CAR */
 
-.car-listing__container {
-  display: flex;
-  height: 100%;
+.car-listing__row {
   max-width: 1500px;
   margin: 0 auto;
   padding: 50px 50px 0 50px;
 }
 
+.car-listing__container {
+  display: flex;
+  height: 548px;
+}
+
 .car-img__container {
   width: 60%;
-  
+  height: 100%;
 }
 
 .car-listing__img {
@@ -859,11 +862,12 @@ SEARCH INFO
 
 .car-listing__info--container {
   width: 50%;
+  height: 100%;
   margin-left: 68px;
 }
 
 .social-actions__container {
-  height: 30px;
+  height: 40px;
   display: flex;
   justify-content: flex-end;
 }
@@ -872,9 +876,10 @@ SEARCH INFO
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 30px;
-  height: 30px;
-  margin-left: 30px;
+  width: 40px;
+  height: 40px;
+  margin-left: 16px;
+  padding: 10px;
   font-size: 25px;
   color: #1b78a6;
   transition: all 400ms ease;
@@ -888,6 +893,7 @@ SEARCH INFO
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  height: calc(100% - 30px);
 }
 
 .car-listing__title--container {
@@ -915,9 +921,87 @@ SEARCH INFO
 .car-listing__contact--container {
   display: flex;
   flex-direction: column;
-  justify-content: end;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.car-listing__btn {
+  margin-top: 20px;
+  height: 60px;
+  width: 50%;
+  border: none;
+  border-radius: 50px;
+  background-color: #135677;
+  color: #ffffff;
+  font-size: 22px;
+  letter-spacing: 2px;
+  font-weight: 700;
+  transition: all 300ms ease;
+}
+
+.car-listing__btn:hover {
+  background-color: #ffbf73;
+  color: #135677;
+}
+
+.car-listing__specs--container {
+  margin-top: 50px;
+}
+
+.car-listing__details--card {
+  background-color: #f3fbfd;
+  padding: 40px 20px;
+  border-radius: 20px;
   width: 100%;
-  height: 200px;
+}
+
+.car-listing__details--title {
+  color: #1b78a6;
+  text-align: center;
+}
+
+.car-listing__specs--container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.car-listing__spec {
+  display: flex;
+}
+
+.car-listing__spec--icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  font-size: 22px;
+  background-color: #ccf0fd;
+  border-radius: 50px;
+  color: #25acef;
+}
+
+.car-listing__spec--divider {
+  margin: 0 6px;
+  border: none;
+  border-radius: 10px;
+  background-color: #ccf0fd;
+  width: 2px;
+}
+
+.car-listing__spec-description--container {
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.car-listing__spec-description--title {
+  font-size: 17px;
+}
+
+.car-listing__spec--description {
+  font-weight: 700;
 }
 
 /* 
