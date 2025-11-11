@@ -837,6 +837,89 @@ SEARCH INFO
   font-size: 22px;
 }
 
+/* CAR */
+
+.car-listing__container {
+  display: flex;
+  height: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 50px 50px 0 50px;
+}
+
+.car-img__container {
+  width: 60%;
+  
+}
+
+.car-listing__img {
+  width: 100%;
+  height: 100%;
+}
+
+.car-listing__info--container {
+  width: 50%;
+  margin-left: 68px;
+}
+
+.social-actions__container {
+  height: 30px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.social-action__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  margin-left: 30px;
+  font-size: 25px;
+  color: #1b78a6;
+  transition: all 400ms ease;
+}
+
+.social-action__btn:hover {
+  color: #ffbf73;
+}
+
+.car-listing__info--wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.car-listing__title--container {
+  margin-top: 40px;
+}
+
+.car-listing__name {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.car-listing__year {
+  font-size: 20px;
+  width: 100%;
+  margin-top: 5px;
+}
+
+.car-listing__price {
+  width: 100%;
+  margin-top: 20px;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.car-listing__contact--container {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  width: 100%;
+  height: 200px;
+}
+
 /* 
 
 MEDIA RESPONSIVENESS
