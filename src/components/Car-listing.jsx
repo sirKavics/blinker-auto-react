@@ -8,6 +8,9 @@ const CarListing = () => {
     <>
       <section id="car-listing">
         <div className="car-listing__row">
+          <div className="car-listing__directory--container">
+            <p className="car-listing__directory">*All Cars* / * Selected Brand* / * Selected Model*</p>
+          </div>
           <div className="car-listing__container">
             <figure className="car-img__container">
               <img src={CarImg} className="car-listing__img" alt="car listing" />
@@ -38,7 +41,7 @@ const CarListing = () => {
                     Get started
                   </button>
                   <button className="car-listing__btn no-cursor">
-                    send message
+                    Send message
                   </button>
                 </div>
               </div>
@@ -86,6 +89,46 @@ const CarListing = () => {
                   <div className="car-listing__spec-description--container">
                     <p className="car-listing__spec-description--title">Transmission</p>
                     <p className="car-listing__spec--description">*TRANSMISSION*</p>
+                  </div>
+                </div>
+                <div className="car-listing__spec">
+                  <figure className="car-listing__spec--icon">
+                    <FontAwesomeIcon icon="gears" />
+                  </figure>
+                  <hr className="car-listing__spec--divider" />
+                  <div className="car-listing__spec-description--container">
+                    <p className="car-listing__spec-description--title">Drivetrain</p>
+                    <p className="car-listing__spec--description">*DRIVETRAIN*</p>
+                  </div>
+                </div>
+                <div className="car-listing__spec">
+                  <figure className="car-listing__spec--icon">
+                    <FontAwesomeIcon icon="gears" />
+                  </figure>
+                  <hr className="car-listing__spec--divider" />
+                  <div className="car-listing__spec-description--container">
+                    <p className="car-listing__spec-description--title">Engine</p>
+                    <p className="car-listing__spec--description">*ENGINE TYPE*</p>
+                  </div>
+                </div>
+                <div className="car-listing__spec">
+                  <figure className="car-listing__spec--icon">
+                    <FontAwesomeIcon icon="gears" />
+                  </figure>
+                  <hr className="car-listing__spec--divider" />
+                  <div className="car-listing__spec-description--container">
+                    <p className="car-listing__spec-description--title">Interior</p>
+                    <p className="car-listing__spec--description">*INTERIOR*</p>
+                  </div>
+                </div>
+                <div className="car-listing__spec">
+                  <figure className="car-listing__spec--icon">
+                    <FontAwesomeIcon icon="gears" />
+                  </figure>
+                  <hr className="car-listing__spec--divider" />
+                  <div className="car-listing__spec-description--container">
+                    <p className="car-listing__spec-description--title">Seating</p>
+                    <p className="car-listing__spec--description">*SEATING NUMBER*</p>
                   </div>
                 </div>
               </div>
