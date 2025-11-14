@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { getAllCars } from "./api/Cars-api.jsx";
 
 import CarCard from "./ui/Car-card.jsx";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const CarsFYC = ({ searchType, searchInput }) => {
   const [cars, setCars] = useState([]);
@@ -44,10 +45,12 @@ const CarsFYC = ({ searchType, searchInput }) => {
       <div className="progress__buffer"></div>
       <div id="filter" className="filter__content--wrapper">
         <div id="search__info" className="search-info__container">
-          <h1 className="search-info">
-            Search results for: <br />
-            <span className="bright-blue">"make, model or keyword"</span>
-          </h1>
+          {searchInput && (
+            <h1 className="search-info">
+              Search results for: <br />
+              <span className="bright-blue">"{searchInput}"</span>
+            </h1>
+          )}
         </div>
         <div className="price-filter__container">
           <h2 className="price-title">
@@ -67,6 +70,15 @@ const CarsFYC = ({ searchType, searchInput }) => {
         </div>
       </div>
       <div id="cars" className="car__list--container">
+        {searchInput && filteredCars.length === 0 && (
+          <div className="car-search__no-results--container">
+            <figure className="car-search__no-results--icon">
+              <FontAwesomeIcon icon="triangle-exclamation" />
+            </figure>
+            <p className="car-search__no-results--title"> No cars found!</p>
+            <p className="car-search__no-results--subtitle">Try a different make, model, or year</p>
+          </div>
+        )}
         <div className="car__list">
           {filteredCars.map((car) => (
             <CarCard key={car.id} car={car} />

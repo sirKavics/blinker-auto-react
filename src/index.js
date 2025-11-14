@@ -14,10 +14,15 @@ import {
   faShareNodes, 
   faHeart,
   faSprayCanSparkles,
-  faGasPump
+  faGasPump,
+  faClipboardList,
+  faUserGroup,
+  faArrowsSpin,
+  faOilCan,
+  faTriangleExclamation,
 } from "@fortawesome/free-solid-svg-icons";
 
-library.add(faBars, faTimes, faSearch, faGaugeHigh, faCarSide, faGears, faShareNodes, faHeart, faSprayCanSparkles, faGasPump )
+library.add(faBars, faTimes, faSearch, faGaugeHigh, faCarSide, faGears, faShareNodes, faHeart, faSprayCanSparkles, faGasPump, faClipboardList, faUserGroup, faArrowsSpin, faOilCan, faTriangleExclamation)
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

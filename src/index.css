@@ -754,6 +754,32 @@ SEARCH INFO
   padding: 40px 0 0;
 }
 
+.car-search__no-results--container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 60px;
+}
+
+.car-search__no-results--icon {
+  font-size: 200px;
+  color: #1f96d1;
+  height: 100%;
+}
+
+.car-search__no-results--title {
+  text-align: center;
+  font-weight: 700;
+  font-size: 40px;
+  margin-bottom: 4px;
+}
+
+.car-search__no-results--subtitle {
+  text-align: center;
+  font-weight: 700;
+  font-size: 22px;
+}
+
 .car__list {
   display: flex;
   justify-content: space-evenly;
@@ -976,7 +1002,7 @@ SEARCH INFO
 .car-listing__spec {
   display: flex;
   width: 23%;
-  margin-bottom: 20px;
+  margin-bottom:32px;
   margin-left: 20px;
 }
 

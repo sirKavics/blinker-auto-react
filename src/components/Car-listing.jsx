@@ -93,7 +93,7 @@ const CarListing = () => {
                 </div>
                 <div className="car-listing__spec">
                   <figure className="car-listing__spec--icon">
-                    <FontAwesomeIcon icon="gears" />
+                    <FontAwesomeIcon icon="arrows-spin" />
                   </figure>
                   <hr className="car-listing__spec--divider" />
                   <div className="car-listing__spec-description--container">
@@ -103,7 +103,7 @@ const CarListing = () => {
                 </div>
                 <div className="car-listing__spec">
                   <figure className="car-listing__spec--icon">
-                    <FontAwesomeIcon icon="gears" />
+                    <FontAwesomeIcon icon="oil-can" />
                   </figure>
                   <hr className="car-listing__spec--divider" />
                   <div className="car-listing__spec-description--container">
@@ -113,7 +113,7 @@ const CarListing = () => {
                 </div>
                 <div className="car-listing__spec">
                   <figure className="car-listing__spec--icon">
-                    <FontAwesomeIcon icon="gears" />
+                    <FontAwesomeIcon icon="clipboard-list" />
                   </figure>
                   <hr className="car-listing__spec--divider" />
                   <div className="car-listing__spec-description--container">
@@ -123,7 +123,7 @@ const CarListing = () => {
                 </div>
                 <div className="car-listing__spec">
                   <figure className="car-listing__spec--icon">
-                    <FontAwesomeIcon icon="gears" />
+                    <FontAwesomeIcon icon="user-group" />
                   </figure>
                   <hr className="car-listing__spec--divider" />
                   <div className="car-listing__spec-description--container">
