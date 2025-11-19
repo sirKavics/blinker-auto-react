@@ -5,40 +5,59 @@ import CarCard from "./ui/Car-card.jsx";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const CarsFYC = ({ searchType, searchInput }) => {
-  const [cars, setCars] = useState([]);
-  const [filteredCars, setFilteredCars] = useState([]);
+  const [cars, setCars] = useState([]); // Original list from API
+  const [filteredCars, setFilteredCars] = useState([]); // Cars after filtering
+  const [priceRange, setPriceRange] = useState(""); // Price filter
 
+  // 1️. Fetch cars from API when component mounts
   useEffect(() => {
     async function fetchCars() {
       const allCars = await getAllCars();
       setCars(allCars);
-      setFilteredCars(allCars);
+      setFilteredCars(allCars); // Initially show all cars
     }
     fetchCars();
   }, []);
 
+  // 2️. Filter cars whenever search input, search type, price range, or cars change
   useEffect(() => {
-    if (!searchInput) {
-      setFilteredCars(cars);
-      return;
+    let searchResults = cars; // Start with all cars
+
+    // a) SEARCH FILTER
+    if (searchInput) {
+      const typeMap = {
+        brand: "car", // brand maps to car property
+        model: "car_model", // model maps to car_model property
+        year: "car_model_year", // year maps to car_model_year property
+      };
+
+      searchResults = searchResults.filter((car) => {
+        const value = car[typeMap[searchType]];
+        return (
+          value &&
+          value.toString().toLowerCase().includes(searchInput.toLowerCase())
+        );
+      });
     }
 
-    const typeMap = {
-      brand: "car",
-      model: "car_model",
-      year: "car_model_year",
-    };
+    // b) PRICE FILTER
 
-    const searchResults = cars.filter((car) => {
-      const value = car[typeMap[searchType]];
-      return (
-        value &&
-        value.toString().toLowerCase().includes(searchInput.toLowerCase())
-      );
-    });
+    if(priceRange) {
+      const [min, max] = priceRange.split("-").map(Number);
 
+      searchResults = searchResults.filter((car) => {
+        // Convert price string "$6,383" -> number 6383
+        const price = Number(
+          car.price.replace("$", "").replace(",", "")
+        );
+
+        return price >= min && price <= max;
+      });
+    }
+
+    // c) Update state with filtered cars
     setFilteredCars(searchResults);
-  }, [searchInput, searchType, cars]);
+  }, [searchInput, searchType, priceRange, cars]);
 
   return (
     <section id="search">
@@ -57,7 +76,13 @@ const CarsFYC = ({ searchType, searchInput }) => {
             <span className="blue">Filter by price:</span>
           </h2>
           <form className="price__options--container">
-            <select name="price__options" id="price" className="price__options">
+            <select
+              name="price__options"
+              id="price"
+              className="price__options"
+              value={priceRange}
+              onChange={(e) => setPriceRange(e.target.value)}
+            >
               <option value="">Select your option...</option>
               <option value="0-1000">Under $1,000</option>
               <option value="1000-2000">$1,000 - $2,000</option>
@@ -76,7 +101,9 @@ const CarsFYC = ({ searchType, searchInput }) => {
               <FontAwesomeIcon icon="triangle-exclamation" />
             </figure>
             <p className="car-search__no-results--title"> No cars found!</p>
-            <p className="car-search__no-results--subtitle">Try a different make, model, or year</p>
+            <p className="car-search__no-results--subtitle">
+              Try a different make, model, or year
+            </p>
           </div>
         )}
         <div className="car__list">

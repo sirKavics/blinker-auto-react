@@ -4,6 +4,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import CarImg from "../assets/image-not-available-template.png";
 
 const CarListing = () => {
+
+
   return (
     <>
       <section id="car-listing">
