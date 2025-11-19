@@ -42,14 +42,12 @@ const CarsFYC = ({ searchType, searchInput }) => {
 
     // b) PRICE FILTER
 
-    if(priceRange) {
+    if (priceRange) {
       const [min, max] = priceRange.split("-").map(Number);
 
       searchResults = searchResults.filter((car) => {
         // Convert price string "$6,383" -> number 6383
-        const price = Number(
-          car.price.replace("$", "").replace(",", "")
-        );
+        const price = Number(car.price.replace("$", "").replace(",", ""));
 
         return price >= min && price <= max;
       });
@@ -95,15 +93,45 @@ const CarsFYC = ({ searchType, searchInput }) => {
         </div>
       </div>
       <div id="cars" className="car__list--container">
-        {searchInput && filteredCars.length === 0 && (
+        {filteredCars.length === 0 && (
           <div className="car-search__no-results--container">
-            <figure className="car-search__no-results--icon">
-              <FontAwesomeIcon icon="triangle-exclamation" />
-            </figure>
-            <p className="car-search__no-results--title"> No cars found!</p>
-            <p className="car-search__no-results--subtitle">
-              Try a different make, model, or year
-            </p>
+            {priceRange && !searchInput && (
+              <>
+                <figure className="car-search__no-results--icon">
+                  <FontAwesomeIcon icon="triangle-exclamation" />
+                </figure>
+                <p className="car-search__no-results--title">
+                  No cars found in this price range!
+                </p>
+                <p className="car-search__no-results--subtitle">
+                  Try choosing a different price filter.
+                </p>
+              </>
+            )}
+            {searchInput && !priceRange && (
+              <>
+                <figure className="car-search__no-results--icon">
+                  <FontAwesomeIcon icon="triangle-exclamation" />
+                </figure>
+                <p className="car-search__no-results--title"> No cars found!</p>
+                <p className="car-search__no-results--subtitle">
+                  Try a different make, model, or year
+                </p>
+              </>
+            )}
+            {searchInput && priceRange && (
+              <>
+                <figure className="car-search__no-results--icon">
+                  <FontAwesomeIcon icon="triangle-exclamation" />
+                </figure>
+                <p className="car-search__no-results--title">
+                  No cars match your search + price range!
+                </p>
+                <p className="car-search__no-results--subtitle">
+                  Try adjusting your filters.
+                </p>
+              </>
+            )}
           </div>
         )}
         <div className="car__list">
