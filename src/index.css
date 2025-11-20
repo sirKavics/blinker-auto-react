@@ -1041,6 +1041,29 @@ SEARCH INFO
   font-weight: 700;
 }
 
+/*
+
+Car Card Skeleton State
+
+*/
+
+.skeleton__card--container {
+  height: 581px;
+}
+
+.skeleton__text {
+  height: 20px;
+  width: 100%;
+  line-height: 20px;
+  background-color: #1f96d11d;
+}
+
+.skeleton__img {
+  height: 275px;
+  width: 100%;
+  background-color: #1f96d11d;
+}
+
 /* 
 
 MEDIA RESPONSIVENESS
