@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { getAllCars } from "./api/Cars-api.jsx";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import CarCard from "./ui/Car-card.jsx";
 import CarCardSkeleton from "./ui/Car-card-skeleton.jsx";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const CarsFYC = ({ searchType, searchInput }) => {
   const [cars, setCars] = useState([]); // Original list from API
@@ -18,7 +18,7 @@ const CarsFYC = ({ searchType, searchInput }) => {
       setCars(allCars);
       setFilteredCars(allCars); // Initially show all cars
 
-      setLoading(true);
+      setTimeout(() => setLoading(false), 600); // Data has been loaded, stopping loading state
     }
     fetchCars();
   }, []);
@@ -97,7 +97,7 @@ const CarsFYC = ({ searchType, searchInput }) => {
         </div>
       </div>
       <div id="cars" className="car__list--container">
-        {filteredCars.length === 0 && (
+        {!loading &&filteredCars.length === 0 && (
           <div className="car-search__no-results--container">
             {priceRange && !searchInput && (
               <>
@@ -139,19 +139,12 @@ const CarsFYC = ({ searchType, searchInput }) => {
           </div>
         )}
         <div className="car__list">
-          {loading ? (
-            [...Array(6).map((_, index) => <CarCardSkeleton key={index} />)]
+          {loading  ?
+          ([...Array(6)].map((_, index) => <CarCardSkeleton key={index} />)
           ) : (
-              filteredCars.map((car) => <CarCard key={car.id} car={car} />)
+            filteredCars.map((car) => <CarCard key={car.id} car={car} />)
           )}
         </div>
-        {loading && (
-          <div className="car__list">
-            <CarCardSkeleton />
-            <CarCardSkeleton />
-            <CarCardSkeleton />
-          </div>
-        )}
       </div>
     </section>
   );
