@@ -1047,21 +1047,54 @@ Car Card Skeleton State
 
 */
 
-.skeleton__card--container {
-  height: 581px;
+.skeleton {
+  background: linear-gradient(
+  120deg, 
+  #1f96d11d 25%, 
+  #1f96d108 50%, 
+  #1f96d11d 75%
+  );
+  background-size: 200%;
+  animation: loading-glow 0.8s infinite ;
+}
+
+@keyframes loading-glow {
+  0% { 
+    background-position: 100% 0; 
+  }
+  100% { 
+    background-position: -100% 0; 
+  }
 }
 
 .skeleton__text {
-  height: 20px;
   width: 100%;
-  line-height: 20px;
-  background-color: #1f96d11d;
 }
 
 .skeleton__img {
-  height: 275px;
+  height: 276px;
   width: 100%;
-  background-color: #1f96d11d;
+}
+
+.car__info--skeleton {
+  height: 294px;
+}
+
+.car__name--skeleton {
+  height: 58px;
+}
+
+.spec__skeleton {
+  width: 100%;
+}
+
+.spec__info--skeleton {
+  height: 26px;
+  margin-bottom: 8px;
+}
+
+.car__price--skeleton {
+  height: 27px;
 }
 
 /* 
