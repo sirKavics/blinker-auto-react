@@ -1,5 +1,7 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 import NavBackground from "../assets/car-lot-background-overlay.jpg";
 import BlinkerLogoWhite from "../assets/blinker-logo-white.svg";
 
@@ -19,33 +21,30 @@ const NavFYC = () => {
       </figure>
       <nav className="nav__fyc">
         <div className="nav__container">
-          <figure>
+          <Link to ="/">
             <img className="blinker__logo" src={BlinkerLogoWhite} alt="" />
-          </figure>
+          </Link>
           <ul className="nav__links">
             <li className="nav__link nav__link--white">
-              <a
-                href="/"
+              <Link to="/"
                 className="nav__link--anchor link__hover-effect nav__link--white link__hover-effect--white"
               >
                 Home
-              </a>
+              </Link>
             </li>
             <li className="nav__link">
-              <a
-                href="/findyourcar"
+              <Link to="/findyourcar"
                 className="nav__link--anchor link__hover-effect nav__link--white link__hover-effect--white"
               >
                 Find your car
-              </a>
+              </Link>
             </li>
             <li className="nav__link">
-              <a
-                href="/"
+              <Link to="/"
                 className="nav__link--anchor btn__contact fyc-btn__contact no-cursor"
               >
                 CONTACT
-              </a>
+              </Link>
             </li>
             <div className="menu__container">
               <button className="btn__menu fyc-menu__btn cursor-pointer">
@@ -59,28 +58,25 @@ const NavFYC = () => {
             </button>
             <ul className="menu__links">
               <li className="menu__list">
-                <a
-                  href="/"
+                <Link to="/"
                   className="menu__link fyc-menu__link link__hover-effect"
                 >
                   Home
-                </a>
+                </Link>
               </li>
               <li className="menu__list">
-                <a
-                  href="/findyourcar"
+                <Link to="/findyourcar"
                   className="menu__link fyc-menu__link link__hover-effect"
                 >
                   Find your car
-                </a>
+                </Link>
               </li>
               <li className="menu__list menu__list--contact">
-                <a
-                  href="/"
+                <Link to="/"
                   className="menu__link--contact btn__contact fyc-btn__contact no-cursor"
                 >
                   CONTACT
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

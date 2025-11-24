@@ -1,5 +1,7 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 import BlinkerLogoColor from "../assets/blinker-logo-color.svg";
 
 const Nav = () => {
@@ -14,28 +16,28 @@ const Nav = () => {
   return (
     <nav>
       <div className="nav__container">
-        <a href="/">
+        <Link to="/">
           <img
             src={BlinkerLogoColor}
             alt="Blinker Logo"
             className="blinker__logo"
           />
-        </a>
+        </Link>
         <ul className="nav__links">
           <li className="nav__list">
-            <a href="/" className="nav__link link__hover-effect">
+            <Link to="/" className="nav__link link__hover-effect">
               Home
-            </a>
+            </Link>
           </li>
           <li className="nav__list">
-            <a href="/findyourcar" className="nav__link link__hover-effect">
+            <Link to="/findyourcar" className="nav__link link__hover-effect">
               Find your car
-            </a>
+            </Link>
           </li>
           <li className="nav__list">
-            <a href="/" className="nav__link btn__contact no-cursor">
+            <Link to="/" className="nav__link btn__contact no-cursor">
               CONTACT
-            </a>
+            </Link> 
           </li>
           <div className="menu__container">
             <button className="btn__menu cursor-pointer">
@@ -49,22 +51,19 @@ const Nav = () => {
           </button>
           <ul className="menu__links">
             <li className="menu__list">
-              <a href="/" className="menu__link link__hover-effect">
+              <Link to="/" className="menu__link link__hover-effect">
                 Home
-              </a>
+              </Link>
             </li>
             <li className="menu__list">
-              <a href="/findyourcar" className="menu__link link__hover-effect">
+              <Link to="/findyourcar" className="menu__link link__hover-effect">
                 Find your car
-              </a>
+              </Link>
             </li>
             <li className="menu__list">
-              <a
-                href="/"
-                className="menu__link--contact btn__contact no-cursor"
-              >
+              <Link to="/" className="menu__link--contact btn__contact no-cursor">
                 CONTACT
-              </a>
+              </Link>
             </li>
           </ul>
         </div>

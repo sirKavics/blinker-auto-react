@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import CarImg from "../../assets/image-not-available-template.png";
@@ -5,7 +6,7 @@ import CarImg from "../../assets/image-not-available-template.png";
 const CarCard = ({ car }) => {
 
   return (
-    <div className="car__card cursor-pointer">
+    <Link to={`/car/${car.id}`} className="car__card cursor-pointer">
       <div className="car__card--container">
         <figure className="car__img--container">
           <img src={CarImg} className="car__img--wrapper" alt="" />
@@ -36,7 +37,7 @@ const CarCard = ({ car }) => {
           <p className="car__price light-blue">{car.price}</p>
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 
