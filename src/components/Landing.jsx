@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import CarChassi from "../assets/ani-car-chassi.svg";
 import CarWheel from "../assets/ani-wheel.svg";
@@ -22,9 +23,9 @@ const Landing = () => {
             FIND YOUR DREAM CAR WITH <span className="blue">BLINKER</span>
           </h2>
           <div className="search__input--wrapper">
-            <a href="/findyourcar">
+            <Link to="/findyourcar">
               <button className="btn__search">BROWSE CARS</button>
-            </a>
+            </Link>
           </div>
         </div>
         <div className="landing__animation--row">
