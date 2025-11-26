@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import Home from "./pages/Home.jsx";
 import FindYourCar from "./pages/FindYourCar.jsx";
-import Car from "./pages/Car.jsx";
+import CarInfo from "./pages/CarInfo.jsx";
 
 
 function App() {
@@ -12,7 +12,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/findyourcar" element={<FindYourCar />} />
-          <Route path="/car/:id" element={<Car />} />
+          <Route path="/car/:id" element={<CarInfo />} />
         </Routes>
       </div>
     </Router>

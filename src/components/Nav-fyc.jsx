@@ -60,6 +60,7 @@ const NavFYC = () => {
               <li className="menu__list">
                 <Link to="/"
                   className="menu__link fyc-menu__link link__hover-effect"
+                  onClick={closeMenu}
                 >
                   Home
                 </Link>
@@ -67,6 +68,7 @@ const NavFYC = () => {
               <li className="menu__list">
                 <Link to="/findyourcar"
                   className="menu__link fyc-menu__link link__hover-effect"
+                  onClick={closeMenu}
                 >
                   Find your car
                 </Link>
@@ -74,6 +76,7 @@ const NavFYC = () => {
               <li className="menu__list menu__list--contact">
                 <Link to="/"
                   className="menu__link--contact btn__contact fyc-btn__contact no-cursor"
+                  onClick={closeMenu}
                 >
                   CONTACT
                 </Link>
