@@ -37,7 +37,7 @@ const Nav = () => {
           <li className="nav__list">
             <Link to="/" className="nav__link btn__contact no-cursor">
               CONTACT
-            </Link> 
+            </Link>
           </li>
           <div className="menu__container">
             <button className="btn__menu cursor-pointer">
@@ -51,17 +51,29 @@ const Nav = () => {
           </button>
           <ul className="menu__links">
             <li className="menu__list">
-              <Link to="/" className="menu__link link__hover-effect">
+              <Link
+                to="/"
+                className="menu__link link__hover-effect"
+                onClick={closeMenu}
+              >
                 Home
               </Link>
             </li>
             <li className="menu__list">
-              <Link to="/findyourcar" className="menu__link link__hover-effect">
+              <Link
+                to="/findyourcar"
+                className="menu__link link__hover-effect"
+                onClick={closeMenu}
+              >
                 Find your car
               </Link>
             </li>
             <li className="menu__list">
-              <Link to="/" className="menu__link--contact btn__contact no-cursor">
+              <Link
+                to="/"
+                className="menu__link--contact btn__contact no-cursor"
+                onClick={closeMenu}
+              >
                 CONTACT
               </Link>
             </li>
@@ -70,6 +82,6 @@ const Nav = () => {
       </div>
     </nav>
   );
-}
+};
 
 export default Nav;
