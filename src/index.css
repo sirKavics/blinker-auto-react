@@ -913,6 +913,8 @@ SEARCH INFO
   height: 40px;
   margin-left: 16px;
   padding: 10px;
+  border: none;
+  background-color: transparent;
   font-size: 25px;
   color: #1b78a6;
   transition: all 400ms ease;
@@ -977,7 +979,7 @@ SEARCH INFO
   color: #135677;
 }
 
-.car-listing__specs--container {
+.car-listing__details--container {
   margin-top: 50px;
 }
 
@@ -997,6 +999,7 @@ SEARCH INFO
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  margin-top: 50px
 }
 
 .car-listing__spec {
@@ -1097,7 +1100,41 @@ Car Card Skeleton State
   height: 27px;
 }
 
-/* 
+/*
+
+Car Listing Skeleton State
+
+*/
+
+.car-listing__img--skeleton {
+  height: 100%;
+  width: 100%;
+}
+
+.car-listing__name--skeleton {
+  height: 36px;
+  width: 70%;
+  margin-bottom: 12px;
+}
+
+.car-listing__year--skeleton {
+  height: 24px;
+  width: 40%;
+}
+
+.car-listing__price--skeleton {
+  height: 36px;
+  width: 50%;
+  margin-top: 20px;
+}
+
+.car-listing__spec-skeleton {
+  width: 95%;
+  height: 50px;
+  margin-bottom: 32px;
+}
+
+/*
 
 MEDIA RESPONSIVENESS
 

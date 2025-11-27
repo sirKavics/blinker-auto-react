@@ -6,6 +6,8 @@ import CarInfo from "./pages/CarInfo.jsx";
 
 
 function App() {
+
+
   return (
     <Router>
       <div className="App">

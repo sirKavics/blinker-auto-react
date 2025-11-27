@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import CarImg from "../assets/image-not-available-template.png";
 import CarDetails from "../components/ui/Car-details.jsx";
 
-const CarListing = () => {
+const CarListing = ({ car }) => {
   return (
     <>
       <section id="car-listing">
@@ -18,23 +18,23 @@ const CarListing = () => {
             </figure>
             <div className="car-listing__info--container">
               <div className="social-actions__container">
-                <figure className="social-action__btn no-cursor">
+                <button className="social-action__btn no-cursor">
                   <FontAwesomeIcon icon="share-nodes" />
-                </figure>
-                <figure className="social-action__btn no-cursor">
+                </button>
+                <button className="social-action__btn no-cursor">
                   <FontAwesomeIcon icon="heart" />
-                </figure>
+                </button>
               </div>
               <div className="car-listing__info--wrapper">
                 <div className="car-listing__title--container">
                   <h1 className="car-listing__name light-blue">
-                    * Car Year, Brand and Model *
+                    {car.car_model_year} {car.car} {car.car_model}
                   </h1>
                   <p className="car-listing__year light-blue">
                     * Car Mileage *
                   </p>
                   <h1 className="car-listing__price light-blue">
-                    * Car Price *
+                    {car.price}
                   </h1>
                 </div>
                 <div className="car-listing__contact--container">
