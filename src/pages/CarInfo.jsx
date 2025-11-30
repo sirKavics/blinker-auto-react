@@ -7,7 +7,7 @@ import CarListing from "../components/Car-listing.jsx";
 import CarListingSkeleton from "../components/ui/Car-listing-skeleton.jsx";
 
 const CarInfo = () => {
-  const [car, setCar] = useState([]);
+  const [car, setCar] = useState(null);
   const [loading, setLoading] = useState(true);
   const { id } = useParams();
 

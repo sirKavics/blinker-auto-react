@@ -14,7 +14,7 @@ const CarListing = ({ car }) => {
           </div>
           <div className="car-listing__container">
             <figure className="car-img__container">
-              <img src={CarImg} className="car-listing__img" alt="car listing" />
+              <img src={car.image} className="car-listing__img" alt="car listing" />
             </figure>
             <div className="car-listing__info--container">
               <div className="social-actions__container">
@@ -28,10 +28,10 @@ const CarListing = ({ car }) => {
               <div className="car-listing__info--wrapper">
                 <div className="car-listing__title--container">
                   <h1 className="car-listing__name light-blue">
-                    {car.car_model_year} {car.car} {car.car_model}
+                    {car.year} {car.make} {car.model}
                   </h1>
                   <p className="car-listing__year light-blue">
-                    * Car Mileage *
+                    {car.mileage} miles
                   </p>
                   <h1 className="car-listing__price light-blue">
                     {car.price}
@@ -48,7 +48,7 @@ const CarListing = ({ car }) => {
               </div>
             </div>
           </div>
-          <CarDetails />
+          <CarDetails car={car} />
         </div>
       </section>
     </>
