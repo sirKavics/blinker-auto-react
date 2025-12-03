@@ -30,9 +30,9 @@ const CarsFYC = ({ searchType, searchInput }) => {
     // a) SEARCH FILTER
     if (searchInput) {
       const typeMap = {
-        brand: "car", // brand maps to car property
-        model: "car_model", // model maps to car_model property
-        year: "car_model_year", // year maps to car_model_year property
+        brand: "make", // brand maps to car brand property
+        model: "model", // model maps to car model property
+        year: "year", // year maps to car_model_year property
       };
 
       searchResults = searchResults.filter((car) => {
@@ -129,7 +129,7 @@ const CarsFYC = ({ searchType, searchInput }) => {
                   <FontAwesomeIcon icon="triangle-exclamation" />
                 </figure>
                 <p className="car-search__no-results--title">
-                  No cars match your search + price range!
+                  No cars match your search and price range!
                 </p>
                 <p className="car-search__no-results--subtitle">
                   Try adjusting your filters.

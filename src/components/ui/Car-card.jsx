@@ -1,8 +1,6 @@
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import CarImg from "../../assets/image-not-available-template.png";
-
 const CarCard = ({ car }) => {
 
   return (

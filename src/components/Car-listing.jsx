@@ -1,7 +1,6 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import CarImg from "../assets/image-not-available-template.png";
 import CarDetails from "../components/ui/Car-details.jsx";
 
 const CarListing = ({ car }) => {
