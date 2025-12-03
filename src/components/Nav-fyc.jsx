@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import NavBackground from "../assets/car-lot-background-overlay.jpg";
 import BlinkerLogoWhite from "../assets/blinker-logo-white.svg";
 
-const NavFYC = () => {
+const NavFYC = ({ onReset }) => {
   function openMenu() {
     document.body.classList += " menu--open";
   }
@@ -35,6 +35,7 @@ const NavFYC = () => {
             <li className="nav__link">
               <Link to="/findyourcar"
                 className="nav__link--anchor link__hover-effect nav__link--white link__hover-effect--white"
+                onClick={onReset}
               >
                 Find your car
               </Link>

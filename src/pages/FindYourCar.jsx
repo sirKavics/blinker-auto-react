@@ -9,7 +9,7 @@ const FindYourCar = () => {
   const [searchInput, setSearchInput] = useState("");
   const [submittedSearch, setSubmittedSearch] = useState({
     type: "",
-     input: "",
+    input: "",
     });
 
   const handleSearchSubmit = (e) => {
@@ -17,12 +17,18 @@ const FindYourCar = () => {
     setSubmittedSearch({
       type: searchType,
       input: searchInput.trim(),
-    });
-  };
+    }); //
+  }; 
+
+  const resetAllCars = () => {
+    setSearchInput("");
+    setSearchType("brand");
+    setSubmittedSearch({ type: "", input: "" });
+  }; // Reset search filters and show all cars
 
   return (
     <>
-      <NavFYC />
+      <NavFYC onReset={resetAllCars} />
       <SearchFYC 
         searchType={searchType}
         searchInput={searchInput}
