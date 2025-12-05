@@ -69,7 +69,10 @@ const NavFYC = ({ onReset }) => {
               <li className="menu__list">
                 <Link to="/findyourcar"
                   className="menu__link fyc-menu__link link__hover-effect"
-                  onClick={closeMenu}
+                  onClick={() => {
+                    onReset();
+                    closeMenu();
+                  }}
                 >
                   Find your car
                 </Link>
