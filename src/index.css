@@ -1159,7 +1159,7 @@ MEDIA RESPONSIVENESS
   }
   .car-listing__info--wrapper {
     height: auto;
-    /* margin-top: 30px; */
+    position: relative
   }
   .car-listing__info--container {
     width: 80%;
@@ -1179,10 +1179,10 @@ MEDIA RESPONSIVENESS
     width: 100%;
   }
   .car-listing__contact--container {
-    position:absolute;
+    position: absolute;
     display: flex;
     flex-direction: row;
-    right: 150px;
+    right: -290px;
     margin-top: 74px;
   }
   .car-listing__btn {
@@ -1192,11 +1192,8 @@ MEDIA RESPONSIVENESS
     font-size: 18px;
     margin-left: 12px;
   }
-  .car-lisitng__details--card {
-    margin-top: 20px;
-  }
-  .car-listing__specs--container {
-    
+  .car-listing__btn {
+    margin: 0 12px 0 12px;
   }
 }
 
@@ -1252,6 +1249,15 @@ MEDIA RESPONSIVENESS
   }
   .car__name {
     font-size: 20px;
+  }
+  .car-listing__info--container {
+    margin: 30px 0 0 0;
+    width: 100%;
+  }
+  .car-listing__contact--container {
+    justify-content: center;
+    /* margin-top: 130px; */
+    right: -230px;
   }
 }
 
