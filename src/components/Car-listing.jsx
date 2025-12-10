@@ -1,15 +1,10 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import CarDetails from "../components/ui/Car-details.jsx";
 
 const CarListing = ({ car }) => {
-  const navigate = useNavigate();
-
-  const goToAllCars = () => navigate("/find-your-car");
-  const goToMake = () => navigate(`/find-your-car?make=${car.make}`);
-  const goToModel = () => navigate(`/find-your-car?model=${car.model}`);
 
   return (
     <>
@@ -17,17 +12,17 @@ const CarListing = ({ car }) => {
         <div className="car-listing__row">
           <div className="car-listing__directory--container">
             <p className="car-listing__directory">
-              <span onClick={goToAllCars} style={{ cursor: "pointer" }}>
+              <Link to="/find-your-car" className="breadcrumb__link">
                 All Cars  
-              </span>
+              </Link>
               {" / "}
-              <span onClick={goToMake} style={{ cursor: "pointer" }}>
+              <Link to={`/find-your-car?make=${encodeURIComponent(car.make)}`} className="breadcrumb__link">
                 {car.make}  
-              </span>
+              </Link>
               {" / "}
-              <span onClick={goToModel} style={{ cursor: "pointer" }}>
+              <Link to={`/find-your-car?model=${encodeURIComponent(car.model)}`} className="breadcrumb__link">
                 {car.model}  
-              </span>
+              </Link>
             </p>
           </div>
           <div className="car-listing__container">
@@ -48,7 +43,7 @@ const CarListing = ({ car }) => {
                   <h1 className="car-listing__name light-blue">
                     {car.year} {car.make} {car.model}
                   </h1>
-                  <p className="car-listing__year light-blue">
+                  <p className="car-listing__miles light-blue">
                     {car.mileage} miles
                   </p>
                   <h1 className="car-listing__price light-blue">

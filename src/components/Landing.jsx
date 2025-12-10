@@ -23,7 +23,7 @@ const Landing = () => {
             FIND YOUR DREAM CAR WITH <span className="blue">BLINKER</span>
           </h2>
           <div className="search__input--wrapper">
-            <Link to="/findyourcar">
+            <Link to="/find-your-car">
               <button className="btn__search">BROWSE CARS</button>
             </Link>
           </div>
