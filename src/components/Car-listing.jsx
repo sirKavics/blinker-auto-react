@@ -1,15 +1,34 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import CarDetails from "../components/ui/Car-details.jsx";
 
 const CarListing = ({ car }) => {
+  const navigate = useNavigate();
+
+  const goToAllCars = () => navigate("/find-your-car");
+  const goToMake = () => navigate(`/find-your-car?make=${car.make}`);
+  const goToModel = () => navigate(`/find-your-car?model=${car.model}`);
+
   return (
     <>
       <section id="car-listing">
         <div className="car-listing__row">
           <div className="car-listing__directory--container">
-            <p className="car-listing__directory">*All Cars* / * Selected Brand* / * Selected Model*</p>
+            <p className="car-listing__directory">
+              <span onClick={goToAllCars} style={{ cursor: "pointer" }}>
+                All Cars  
+              </span>
+              {" / "}
+              <span onClick={goToMake} style={{ cursor: "pointer" }}>
+                {car.make}  
+              </span>
+              {" / "}
+              <span onClick={goToModel} style={{ cursor: "pointer" }}>
+                {car.model}  
+              </span>
+            </p>
           </div>
           <div className="car-listing__container">
             <figure className="car-img__container">

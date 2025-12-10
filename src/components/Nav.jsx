@@ -30,7 +30,7 @@ const Nav = () => {
             </Link>
           </li>
           <li className="nav__list">
-            <Link to="/findyourcar" className="nav__link link__hover-effect">
+            <Link to="/find-your-car" className="nav__link link__hover-effect">
               Find your car
             </Link>
           </li>
@@ -61,7 +61,7 @@ const Nav = () => {
             </li>
             <li className="menu__list">
               <Link
-                to="/findyourcar"
+                to="/find-your-car"
                 className="menu__link link__hover-effect"
                 onClick={closeMenu}
               >

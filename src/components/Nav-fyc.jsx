@@ -22,7 +22,7 @@ const NavFYC = ({ onReset }) => {
       <nav className="nav__fyc">
         <div className="nav__container">
           <Link to ="/">
-            <img className="blinker__logo" src={BlinkerLogoWhite} alt="" />
+            <img className="blinker__logo fyc-blinker__logo" src={BlinkerLogoWhite} alt="" />
           </Link>
           <ul className="nav__links">
             <li className="nav__link nav__link--white">
@@ -33,7 +33,7 @@ const NavFYC = ({ onReset }) => {
               </Link>
             </li>
             <li className="nav__link">
-              <Link to="/findyourcar"
+              <Link to="/find-your-car"
                 className="nav__link--anchor link__hover-effect nav__link--white link__hover-effect--white"
                 onClick={onReset}
               >
@@ -67,7 +67,7 @@ const NavFYC = ({ onReset }) => {
                 </Link>
               </li>
               <li className="menu__list">
-                <Link to="/findyourcar"
+                <Link to="/find-your-car"
                   className="menu__link fyc-menu__link link__hover-effect"
                   onClick={() => {
                     onReset();

@@ -1110,6 +1110,15 @@ Car Listing Skeleton State
 
 */
 
+.car-listing__directory--skeleton {
+  width: 30%;
+  height: 24px;
+}
+
+.car-img__container--skeleton {
+  width: 55%;
+}
+
 .car-listing__img--skeleton {
   height: 100%;
   width: 100%;
@@ -1132,8 +1141,14 @@ Car Listing Skeleton State
   margin-top: 20px;
 }
 
+.car-listing__specs--skeleton {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .car-listing__spec-skeleton {
-  width: 95%;
+  width: 80%;
   height: 50px;
   margin-bottom: 32px;
 }
@@ -1159,7 +1174,7 @@ MEDIA RESPONSIVENESS
   }
   .car-listing__info--wrapper {
     height: auto;
-    position: relative
+    position: relative;
   }
   .car-listing__info--container {
     width: 80%;
@@ -1256,7 +1271,6 @@ MEDIA RESPONSIVENESS
   }
   .car-listing__contact--container {
     justify-content: center;
-    /* margin-top: 130px; */
     right: -230px;
   }
 }
@@ -1264,6 +1278,16 @@ MEDIA RESPONSIVENESS
 /* TABLETS */
 
 @media (max-width: 768px) {
+  .blinker__logo {
+    position: absolute;
+    top: 33px;
+  }
+  .fyc-blinker__logo {
+    top: 7px;
+  }
+  .can__container {
+    width: 100%;
+  }
   .btn__menu {
     top: 2px;
   }
@@ -1355,20 +1379,29 @@ MEDIA RESPONSIVENESS
   .car__card {
     max-width: calc(100% / 2.3);
   }
+  .car-img__container {
+    width: 100%;
+  }
+  .car-listing__img {
+    width: 100%;;
+  }
+  
 }
 
 /* MOBILE PHONES */
 
 @media (max-width: 576px) {
+  .blinker__logo {
+    top: 16px;
+    width: 140px;
+  }
   nav {
     width: 100%;
     height: 132px;
   }
   .btn__menu {
     top: 2px;
-    right: 48px;
   }
-
   .btn__menu--close {
     top: 40px;
     right: 48px;
@@ -1456,6 +1489,9 @@ MEDIA RESPONSIVENESS
   .navbar__img--overlay {
     width: 400%;
   }
+  .fyc-blinker__logo {
+    top: 6px;
+  }
   .fyc-menu__btn {
     right: 0px;
   }
@@ -1521,6 +1557,7 @@ MEDIA RESPONSIVENESS
     width: 50%;
     height: 46px;
     margin: 0 auto;
+    font-size: 20px;
   }
   .fyc-btn__search:hover {
     color: white;
@@ -1563,6 +1600,8 @@ MEDIA RESPONSIVENESS
   }
   .blinker__logo {
     width: 120px;
+    position: absolute;
+    top: 0px;
   }
   .btn__menu {
     top: 2px;
@@ -1573,7 +1612,7 @@ MEDIA RESPONSIVENESS
     right: 49px;
   }
   .menu__backdrop {
-    height: 256px;
+    height: 260px;
   }
   .menu__link {
     font-size: 20px;
@@ -1641,8 +1680,10 @@ MEDIA RESPONSIVENESS
   .nav__fyc {
     padding: 25px 0px;
   }
+  .fyc-blinker__logo {
+    top: 7px;
+  }
   .fyc-menu__btn {
-    right: 30px;
     scale: 0.8;
   }
   .fyc__menu--backdrop {
