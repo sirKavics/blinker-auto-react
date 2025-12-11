@@ -20,7 +20,7 @@ const CarListing = ({ car }) => {
                 {car.make}  
               </Link>
               {" / "}
-              <Link to={`/find-your-car?model=${encodeURIComponent(car.model)}`} className="breadcrumb__link">
+              <Link to={`/find-your-car?make=${encodeURIComponent(car.make)}&model=${encodeURIComponent(car.model)}`} className="breadcrumb__link">
                 {car.model}  
               </Link>
             </p>
