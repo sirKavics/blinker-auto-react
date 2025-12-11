@@ -1221,6 +1221,8 @@ MEDIA RESPONSIVENESS
   }
 }
 
+/* SMALL LAPTOPS AND LARGE TABLETS */
+
 @media (max-width: 996px) {
   .nav__link {
     visibility: hidden;
