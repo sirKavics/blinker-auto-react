@@ -11,31 +11,41 @@ const CarDetails = ({ car }) => {
             <CarSpec
               icon="gauge-high"
               title="MPG"
-              value={`${car.mpg_city} city, ${car.mpg_highway} hwy`}
+              value={`${car.model_lkm_city} city/${car.model_lkm_hwy} hwy`}
             />
-            <CarSpec icon="gas-pump" title="Fuel type" value={car.fuel_type} />
+            <CarSpec
+              icon="gas-pump"
+              title="Fuel type"
+              value={car.model_engine_fuel}
+            />
             <CarSpec
               icon="spray-can-sparkles"
-              title="Exterior color"
-              value={car.exterior_color}
+              title="Trim"
+              value={car.model_body}
             />
             <CarSpec
               icon="gears"
               title="Transmission"
-              value={car.transmission}
+              value={car.model_transmission_type}
             />
             <CarSpec
               icon="arrows-spin"
               title="Drivetrain"
-              value={car.drivetrain}
+              value={car.model_drive}
             />
-            <CarSpec icon="oil-can" title="Engine" value={car.engine} />
+            <CarSpec 
+              icon="oil-can" 
+              title="Engine"
+              value={car.model_trim} />
             <CarSpec
-              icon="clipboard-list"
-              title="Interior"
-              value={car.interior}
+              icon="car-side"
+              title="Car body"
+              value={car.model_body}
             />
-            <CarSpec icon="user-group" title="Seating" value={car.seating} />
+            <CarSpec 
+              icon="right-to-bracket" 
+              title="Doors" 
+              value={car.model_doors} />
           </div>
         </div>
       </div>

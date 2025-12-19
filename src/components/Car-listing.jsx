@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import CarDetails from "../components/ui/Car-details.jsx";
+import CarPhoto from "../assets/image-not-available-template.png"
 
 const CarListing = ({ car }) => {
 
@@ -16,18 +17,18 @@ const CarListing = ({ car }) => {
                 All Cars  
               </Link>
               {" / "}
-              <Link to={`/find-your-car?make=${encodeURIComponent(car.make)}`} className="breadcrumb__link">
-                {car.make}  
+              <Link to={`/find-your-car?make=${encodeURIComponent(car.model_make_id)}`} className="breadcrumb__link">
+                {car.model_make_id}  
               </Link>
               {" / "}
-              <Link to={`/find-your-car?make=${encodeURIComponent(car.make)}&model=${encodeURIComponent(car.model)}`} className="breadcrumb__link">
-                {car.model}  
+              <Link to={`/find-your-car?make=${encodeURIComponent(car.model_make_id)}&model=${encodeURIComponent(car.model_name)}`} className="breadcrumb__link">
+                {car.model_name}  
               </Link>
             </p>
           </div>
           <div className="car-listing__container">
             <figure className="car-img__container">
-              <img src={car.image} className="car-listing__img" alt="car listing" />
+              <img src={CarPhoto} className="car-listing__img" alt="car listing" />
             </figure>
             <div className="car-listing__info--container">
               <div className="social-actions__container">
@@ -41,13 +42,13 @@ const CarListing = ({ car }) => {
               <div className="car-listing__info--wrapper">
                 <div className="car-listing__title--container">
                   <h1 className="car-listing__name light-blue">
-                    {car.year} {car.make} {car.model}
+                    {car.model_year} {car.model_make_id} {car.model_name}
                   </h1>
                   <p className="car-listing__miles light-blue">
-                    {car.mileage} miles
+                    {car.model_mileage} miles
                   </p>
                   <h1 className="car-listing__price light-blue">
-                    {car.price}
+                    ${car.model_price}
                   </h1>
                 </div>
                 <div className="car-listing__contact--container">
