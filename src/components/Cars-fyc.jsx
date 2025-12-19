@@ -18,7 +18,8 @@ const CarsFYC = ({ searchType, searchInput }) => {
       setCars(allCars);
       setFilteredCars(allCars); // Initially show all cars
 
-      setTimeout(() => setLoading(false), 600); // Data has been loaded, stopping loading state
+      setLoading(false);
+      console.log("fetchCars called"); // Data has been loaded, stopping loading state
     }
     fetchCars();
   }, []);
@@ -30,9 +31,9 @@ const CarsFYC = ({ searchType, searchInput }) => {
     // a) SEARCH FILTER
     if (searchInput) {
       const typeMap = {
-        brand: "make", // brand maps to car brand property
-        model: "model", // model maps to car model property
-        year: "year", // year maps to car_model_year property
+        brand: "model_make_id", // brand maps to car brand property
+        model: "model_name", // model maps to car model property
+        year: "model_year", // year maps to car_model_year property
       };
 
       searchResults = searchResults.filter((car) => {
@@ -50,10 +51,8 @@ const CarsFYC = ({ searchType, searchInput }) => {
       const [min, max] = priceRange.split("-").map(Number);
 
       searchResults = searchResults.filter((car) => {
-        // Convert price string "$6,383" -> number 6383
-        const price = Number(car.price.replace("$", "").replace(",", ""));
 
-        return price >= min && price <= max;
+      return car.price >= min && car.price <= max;
       });
     }
 
@@ -97,7 +96,7 @@ const CarsFYC = ({ searchType, searchInput }) => {
         </div>
       </div>
       <div id="cars" className="car__list--container">
-        {!loading &&filteredCars.length === 0 && (
+        {!loading && filteredCars.length === 0 && (
           <div className="car-search__no-results--container">
             {priceRange && !searchInput && (
               <>
@@ -142,7 +141,7 @@ const CarsFYC = ({ searchType, searchInput }) => {
           {loading  ?
           ([...Array(12)].map((_, index) => <CarCardSkeleton key={index} />)
           ) : (
-            filteredCars.map((car) => <CarCard key={car.id} car={car} />)
+            filteredCars.map((car) => <CarCard key={car.model_id} car={car} />)
           )}
         </div>
       </div>
