@@ -30,7 +30,7 @@ const CarCard = ({ car }) => {
               <figure className="spec__img">
                 <FontAwesomeIcon icon="spray-can-sparkles" />
               </figure>
-              <p className="spec__info light-blue">{car.exterior_color}</p>
+              <p className="spec__info light-blue">{car.model_body}</p>
             </div>
             <div className="car__spec">
               <figure className="spec__img">
@@ -41,7 +41,7 @@ const CarCard = ({ car }) => {
               </p>
             </div>
           </div>
-          <p className="car__price light-blue">${car.model_price}</p>
+          <p className="car__price light-blue">${car.model_price.toLocaleString()}</p>
         </div>
       </div>
     </Link>

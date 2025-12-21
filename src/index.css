@@ -883,10 +883,11 @@ SEARCH INFO
   color: #4fb3ff;
   text-decoration: none;
   cursor: pointer;
+  font-weight: 700;
 }
 
 .breadcrumb__link:hover {
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .car-listing__container {
@@ -1125,7 +1126,8 @@ Car Listing Skeleton State
 }
 
 .car-img__container--skeleton {
-  width: 55%;
+  width: 100%;
+  height: 100%;
 }
 
 .car-listing__img--skeleton {
@@ -1177,9 +1179,16 @@ MEDIA RESPONSIVENESS
   }
   .car-img__container {
     margin: 0 auto;
+    width: 100%;
   }
   .car-listing__container {
     height: auto;
+  }
+  .car-img__container {
+    width: 100%;
+  }
+  .car-listing__img {
+    width: 100%
   }
   .car-listing__info--wrapper {
     height: auto;
@@ -1584,8 +1593,7 @@ MEDIA RESPONSIVENESS
     width: 50%;
     color: white;
     background-color: #1f96d1;
-    width: 50%;
-    height: 46px;
+    height: 38px;
     margin: 0 auto;
     font-size: 20px;
   }

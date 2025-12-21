@@ -14,13 +14,20 @@ const CarsFYC = ({ searchType, searchInput }) => {
   // 1️. Fetch cars from API when component mounts
   useEffect(() => {
     async function fetchCars() {
-      const allCars = await getAllCars();
-      setCars(allCars);
-      setFilteredCars(allCars); // Initially show all cars
-
-      setLoading(false);
-      console.log("fetchCars called"); // Data has been loaded, stopping loading state
+      try {
+        const allCars = await getAllCars();
+        
+        setCars(allCars);
+        setFilteredCars(allCars); // Initially show all cars
+      } catch (error) {
+        console.error("Failed to fetch cars:", error);
+        setCars([]);
+        setFilteredCars([]);
+      } finally {
+        setLoading(false);  // Data has been loaded, stopping loading state
+      }
     }
+    
     fetchCars();
   }, []);
 
@@ -52,7 +59,7 @@ const CarsFYC = ({ searchType, searchInput }) => {
 
       searchResults = searchResults.filter((car) => {
 
-      return car.price >= min && car.price <= max;
+      return car.model_price >= min && car.model_price <= max;
       });
     }
 
