@@ -14,7 +14,7 @@ const CarListing = ({ car }) => {
           <div className="car-listing__directory--container">
             <p className="car-listing__directory">
               <Link to="/find-your-car" className="breadcrumb__link">
-                All Cars  
+                All cars  
               </Link>
               {" / "}
               <Link to={`/find-your-car?make=${encodeURIComponent(car.model_make_id)}`} className="breadcrumb__link">
@@ -45,10 +45,10 @@ const CarListing = ({ car }) => {
                     {car.model_year} {car.model_make_id} {car.model_name}
                   </h1>
                   <p className="car-listing__miles light-blue">
-                    {car.model_mileage} miles
+                    {car.model_mileage.toLocaleString()} miles
                   </p>
                   <h1 className="car-listing__price light-blue">
-                    ${car.model_price}
+                    ${car.model_price.toLocaleString()}
                   </h1>
                 </div>
                 <div className="car-listing__contact--container">

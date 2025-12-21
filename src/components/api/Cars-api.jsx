@@ -12,21 +12,27 @@ const generateRandomMiles = (min = 20000, max = 250000) => {
 }
 
 export const getAllCars = async () => {
-    const cached = sessionStorage.getItem("cars");
-    if (cached) {
-        return JSON.parse(cached);
+    try {
+
+        const cached = sessionStorage.getItem("cars");
+        if (cached) {
+            return JSON.parse(cached);
+        }
+        
+        const { data } = await axios.get(CARS_API_URL);
+        
+        //Add price to each car
+        const cars = data.trims.map((car) => ({
+            ...car,
+            model_price: generateRandomPrice(),
+            model_mileage: generateRandomMiles(),
+        }));
+        
+        sessionStorage.setItem("cars", JSON.stringify(cars));
+        
+        return cars;
+    } catch (error) {
+      console.error("getAllCars failed:", error);
+      return [];
     }
-
-    const { data } = await axios.get(CARS_API_URL);
-
-    //Add price to each car
-    const cars = data.trims.map((car) => ({
-        ...car,
-        model_price: generateRandomPrice(),
-        model_mileage: generateRandomMiles(),
-    }));
-
-    sessionStorage.setItem("cars", JSON.stringify(cars));
-
-    return cars;
 };
