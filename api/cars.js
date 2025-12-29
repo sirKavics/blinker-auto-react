@@ -3,7 +3,7 @@ import axios from "axios";
 export default async function handler(req, res) {
   try {
     const response = await axios.get(
-      "https://www.carqueryapi.com/api/0.3/",
+      "http://www.carqueryapi.com/api/0.3/",
       {
         params: {
           cmd: "getTrims",
