@@ -3,7 +3,7 @@ import axios from "axios";
 export default async function handler(req, res) {
   try {
     const response = await axios.get(
-      "https://www.carqueryapi.com/api/0.3/",
+      "https://www.carqueryapi.com/api/0.3/?cmd=getTrims",
       {
         params: {
           cmd: "getTrims",
@@ -11,7 +11,7 @@ export default async function handler(req, res) {
         },
       }
     );
-
+    
     const data = response.data;
 
     // Normalize casing inconsistency
@@ -26,9 +26,9 @@ export default async function handler(req, res) {
 
     res.status(200).json({ trims });
   } catch (error) {
-    console.error("CarQuery fetch failed:", error.message);
+    console.error("Car data fetch failed:", error.message);
     res.status(500).json({
-      error: "Failed to fetch cars from CarQuery",
+      error: "Failed to fetch car data",
     });
   }
 }
