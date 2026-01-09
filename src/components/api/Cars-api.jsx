@@ -1,19 +1,19 @@
 import axios from "axios";
 
 // const CARS_API_URL = "/cars.json"
-const CARS_API_URL = "/api/cars";
+const CARS_API_URL = "/api/cars/route.js";
 
 const generateRandomPrice = (min = 1000, max = 10000) => {
     return Math.floor(Math.random() * (max - min + 1)) + min;
-    // Create random price number
+    // Create random number for price
 };
 const generateRandomMiles = (min = 20000, max = 250000) => {
     return Math.floor(Math.random() * (max - min + 1)) + min;
+    // Create random number for miles
 }
 
 export const getAllCars = async () => {
     try {
-
         const cached = sessionStorage.getItem("cars");
         if (cached) {
             return JSON.parse(cached);
