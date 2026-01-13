@@ -1,4 +1,3 @@
-import axios from "axios";
 
 export const config = {
   runtime: "nodejs",
@@ -6,7 +5,7 @@ export const config = {
 
 export default async function handler(req, res) {
   try {
-    const response = await axios.get(
+    const response = await fetch(
       "https://www.carqueryapi.com/api/0.3/?cmd=getTrims",
       {
         params: {
