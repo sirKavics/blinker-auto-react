@@ -1,5 +1,9 @@
 import axios from "axios";
 
+export const config = {
+  runtime: "nodejs",
+};
+
 export default async function handler(req, res) {
   try {
     const response = await axios.get(
