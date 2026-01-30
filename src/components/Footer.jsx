@@ -4,6 +4,10 @@ import { Link } from "react-router-dom";
 import BlinkerLogoWhite from "../assets/blinker-logo-white.svg";
 
 const Footer = () => {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
   return (
     <div className="footer__container">
       <div className="footer__container--wrapper">
@@ -15,19 +19,37 @@ const Footer = () => {
           />
         </div>
         <div className="footer__links--container">
-          <Link to="/" className="footer__link footer__link link__hover-effect">
-            Back to top
+          <Link 
+            to="#" 
+            onClick={scrollToTop}
+            className="footer__link link__hover-effect">
+            Back to top ↥
           </Link>
-          <Link to="/find-your-car" className="footer__link footer__link link__hover-effect">
+          <Link to="/find-your-car" className="footer__link link__hover-effect">
             Find your car
           </Link>
-          <Link to="/" className="footer__link footer__link link__hover-effect">
+          <Link
+            to="/find-your-car"
+            className="no-cursor footer__link link__hover-effect"
+          >
+            About us
+          </Link>
+          <Link to="/" className="no-cursor footer__link link__hover-effect">
             Contact
           </Link>
         </div>
-        <p className="footer__copyrights--text">
-          Copyright © 2026 Blinker
-        </p>
+        <div className="footer__divider"></div>
+        <div className="footer__details">
+          <p className="footer__copyrights--text">© 2026 Blinker</p>
+          <div className="footer__legal">
+            <Link className="no-cursor footer__copyrights--text footer__legal--link">
+              Terms of service
+            </Link>
+            <Link className="no-cursor footer__copyrights--text footer__legal--link">
+              Privacy policy
+            </Link>
+          </div>
+        </div>
       </div>
     </div>
   );
