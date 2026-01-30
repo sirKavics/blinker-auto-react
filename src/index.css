@@ -561,21 +561,37 @@ FOOTER
 }
 
 .footer__links--container {
-  margin-top: 16px;
-  margin-bottom: 16px;
+  margin: 24px 0;
 }
 
 .footer__link {
   color: white;
-  padding: 0 24px;
+  margin: 0 24px;
   font-size: 20px;
 }
+
+.footer__divider {
+  height: 3px;
+  width: 100%;
+  border-radius: 50px;
+  background-color: white;
+}
+
+.footer__details {
+  margin-top: 18px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  }
 
 .footer__copyrights--text {
   color: white;
   font-size: 16px;
   font-weight: 500;
-  margin-top: 10px;
+}
+
+.footer__legal--link {
+  margin-left: 20px;
 }
 
 /* FIND YOUR CAR */

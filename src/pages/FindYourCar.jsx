@@ -24,6 +24,7 @@ const FindYourCar = () => {
   const location = useLocation();
 
   useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
     const params = new URLSearchParams(location.search);
 
     if (params.has("make")) {

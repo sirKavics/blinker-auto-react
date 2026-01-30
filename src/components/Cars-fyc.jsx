@@ -146,7 +146,7 @@ const CarsFYC = ({ searchType, searchInput }) => {
         )}
         <div className="car__list">
           {loading  ?
-          ([...Array(12)].map((_, index) => <CarCardSkeleton key={index} />)
+          ([...Array(6)].map((_, index) => <CarCardSkeleton key={index} />)
           ) : (
             filteredCars.map((car) => <CarCard key={car.model_id} car={car} />)
           )}
