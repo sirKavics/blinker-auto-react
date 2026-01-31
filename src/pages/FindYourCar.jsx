@@ -4,6 +4,7 @@ import { useLocation } from "react-router-dom";
 import NavFYC from "../components/Nav-fyc.jsx";
 import SearchFYC from "../components/Search-fyc.jsx";
 import CarsFYC from "../components/Cars-fyc.jsx";
+import Footer from "../components/Footer.jsx";
 
 const FindYourCar = () => {
   const [searchType, setSearchType] = useState("brand");
@@ -66,6 +67,7 @@ const FindYourCar = () => {
         searchType={submittedSearch.type}
         searchInput={submittedSearch.input}
       />
+      <Footer />
     </>
   );
 };
