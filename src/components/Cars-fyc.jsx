@@ -10,13 +10,13 @@ const CarsFYC = ({ searchType, searchInput }) => {
   const [loading, setLoading] = useState(true);
   const [filteredCars, setFilteredCars] = useState([]); // Cars after filtering
   const [priceRange, setPriceRange] = useState(""); // Price filter
+  const [visibleCars, setVisibleCars] = useState(9); // Number of cars to show initially
 
   // 1️. Fetch cars from API when component mounts
   useEffect(() => {
     async function fetchCars() {
       try {
         const allCars = await getAllCars();
-        
         setCars(allCars);
         setFilteredCars(allCars); // Initially show all cars
       } catch (error) {
@@ -66,6 +66,10 @@ const CarsFYC = ({ searchType, searchInput }) => {
     // c) Update state with filtered cars
     setFilteredCars(searchResults);
   }, [searchInput, searchType, priceRange, cars]);
+
+  useEffect(() => {
+    setVisibleCars(9);
+  }, [searchInput, searchType, priceRange]);
 
   return (
     <section id="search">
@@ -148,9 +152,16 @@ const CarsFYC = ({ searchType, searchInput }) => {
           {loading  ?
           ([...Array(6)].map((_, index) => <CarCardSkeleton key={index} />)
           ) : (
-            filteredCars.map((car) => <CarCard key={car.model_id} car={car} />)
+            filteredCars.slice(0, visibleCars).map((car) => <CarCard key={car.model_id} car={car} />)
           )}
         </div>
+        {!loading && visibleCars < filteredCars.length && (
+          <div className="load-more__container">
+            <button className="load-more__button cursor-pointer light-blue" onClick={() => setVisibleCars(prev => prev + 9)}>
+              Load more
+            </button>
+          </div>
+        )}
       </div>
     </section>
   );

@@ -657,7 +657,6 @@ NAVBAR
   flex-direction: column;
   justify-content: center;
   width: 600px;
-  /* margin: 0 auto; */
   position: absolute;
   top: 220px;
   left: 50%;
@@ -819,6 +818,23 @@ SEARCH INFO
   padding: 40px 0 0;
 }
 
+.load-more__container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0 40px 0;
+}
+
+.load-more__button {
+  width: 200px;
+  height: 50px;
+  border: #1f96d171 2px solid;
+  border-radius: 50px;
+  background-color: white;
+  color: #1f96d1;
+  font-size: 18px;
+  font-weight: 700;
+}
+
 .car-search__no-results--container{
   display: flex;
   flex-direction: column;
@@ -926,6 +942,8 @@ SEARCH INFO
 .car__price {
   font-weight: 700;
   font-size: 22px;
+  display: flex;
+  justify-content: end;
 }
 
 /* CAR LISTING */
