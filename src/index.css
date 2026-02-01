@@ -1438,7 +1438,7 @@ MEDIA RESPONSIVENESS
     left: 250px;
   }
   header {
-    height: calc(100vh - 300px);
+    height: calc(100vh - 164px);
   }
   .footer__links--container {
     width: 100%;
@@ -1624,7 +1624,7 @@ MEDIA RESPONSIVENESS
     left: 175px;
   }
   header {
-    height: calc(100vh - 600px);
+    height: calc(100vh - 132px);
   }
   .footer__container {
     padding:20px 0;
@@ -1893,7 +1893,7 @@ MEDIA RESPONSIVENESS
     top: -60px;
   }
   header {
-    height: calc(100vh - 730px);
+    height: calc(100vh - 100px);
   }
   .footer__blinker-logo--container {
     width: 110px;
